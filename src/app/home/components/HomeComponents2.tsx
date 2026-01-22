@@ -5,9 +5,9 @@ import Hero2 from '@/shared/assets/images/Hero2.svg'
 
 export default function HomeComponents2() {
   return (
-    <div className='space-y-10 text-center'>
-      <h1 className='font-semibold text-6xl'>Kenapa K-Zen Pilihan Karir Terbaikmu</h1>
-      <h2 className='font-light text-Kzen-neutral text-3xl'>Temukan Layanan Terbaik dengan Kebutuhan Karir Impianmu</h2>
+    <div className='space-y-2 text-center'>
+      <h1 className='font-semibold text-4xl'>Kenapa K-Zen Pilihan Karir Terbaikmu</h1>
+      <h2 className='font-light text-Kzen-neutral text-2xl'>Temukan Layanan Terbaik dengan Kebutuhan Karir Impianmu</h2>
       <Image
         src={Hero2}
         alt='hero'

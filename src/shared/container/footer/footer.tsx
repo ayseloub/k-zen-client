@@ -55,7 +55,7 @@ export default function Footer() {
                             rel="noopener noreferrer"
                             className='hover:opacity-80 transition-opacity bg-white rounded-full p-2'
                         >
-                            <Icon icon={contact.icon} width={45} height={45} className='text-Kzen-dark/90' />
+                            <Icon icon={contact.icon} width={30} height={30} className='text-Kzen-dark/90' />
                         </a>
                     ))}
                 </div>
