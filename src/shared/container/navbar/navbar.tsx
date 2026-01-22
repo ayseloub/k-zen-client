@@ -31,11 +31,11 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="border border-opacity-50 flex mt-4 items-center justify-between p-4 rounded-full mx-36 bg-white shadow-lg">
+    <nav className="border border-opacity-50 flex mt-4 items-center justify-between p-4 rounded-full mx-72 bg-white shadow-lg">
       
       <section>
         <a href="/" className="text-xl font-bold">
-          <Image src={Logo} alt="Logo" width={150} />
+          <Image src={Logo} alt="Logo" width={110} />
         </a>
       </section>
 

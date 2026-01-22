@@ -6,7 +6,7 @@ import ConsultationBox from '@/shared/assets/components/consultationBox'
 
 export default function HomeComponents1() {
   return (
-    <div className='flex gap-40 items-center p-20 justify-center'>
+    <div className='flex gap-40 items-center py-12 px-20 justify-center'>
         <section>
          <h1 className='text-Kzen-dark font-semibold text-4xl'>
             Langkah Pasti Menuju    

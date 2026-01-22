@@ -18,7 +18,7 @@ export default function HomeComponents6() {
         <div className='flex justify-between'>
             <section className="text-left mb-12">
                 <p className="text-Kzen-dark/90 text-xl font-medium mb-2">Webinar K-Zen</p>
-                <h1 className="text-4xl font-bold mb-3">
+                <h1 className="text-4xl font-semibold mb-3">
                 Jadwal <span className="text-Kzen-primary">Webinar</span> Terdekat
                 </h1>
                 <h2 className="text-2xl text-Kzen-neutral/90">
