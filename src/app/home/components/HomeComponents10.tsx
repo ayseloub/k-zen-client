@@ -17,10 +17,10 @@ export default function HomeComponents10() {
                 <h1 className='text-2xl font-light text-Kzen-dark/20'>
                     Info Kontak
                 </h1>
-                <p className='text-4xl font-semibold text-Kzen-dark'>
+                <p className='text-3xl font-semibold text-Kzen-dark'>
                     <span className='text-Kzen-primary'>Kami hadir</span> untuk mendukung
                 </p>
-                <p className='text-4xl font-semibold text-Kzen-dark'>langkah perjalananmu</p>
+                <p className='text-3xl font-semibold text-Kzen-dark'>langkah perjalananmu</p>
             </div>
             <div className='flex'>
                 {ContactListWithHour.map((contact, index) => (
