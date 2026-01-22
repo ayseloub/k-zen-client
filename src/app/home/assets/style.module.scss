@@ -1,0 +1,32 @@
+.contactForm {
+  // Label styling - lebih besar
+  :global(.ant-form-item-label) {
+    > label {
+      font-size: 16px;
+      font-weight: 500;
+      color: #374151;
+    }
+  }
+
+  // Input styling - border bottom only
+  :global(.ant-input),
+  :global(.ant-input-textarea) {
+    border: none;
+    border-bottom: 2px solid #151515;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+    background: transparent;
+    
+  }
+
+  // Textarea specific
+  :global(.ant-input-textarea) {
+    border-bottom: 2px solid #d1d5db;
+    
+    &:hover,
+    &:focus-within {
+      border-bottom: 2px solid var(--kzen-primary);
+    }
+  }
+}
