@@ -9,7 +9,7 @@ import { kampus, perusahaan } from '@/shared/models/static/SponsorList';
 export default function HomeCommponents3() {
   return (
     <div className='flex mt-10 mx-10 items-center space-x-10'>
-        <section className='w-1/2 space-y-5 h-max-50'>
+        <section className='w-1/2 space-y-7 h-max-50'>
           <Marquee gradient={false} speed={80} direction='left'>
             {kampus.map((campus, index) => (
                     <div key={index} className='flex gap-10'>
