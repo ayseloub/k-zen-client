@@ -8,14 +8,15 @@ interface INavItem {
 export const NavigationList: INavItem[] = [
   {
     title: "Tentang Kami",
-    href: "/aboutus",
+    href: "/",
   },
   {
     title: "Studi Lanjut",
+    href: "/studilanjut",
     children: [
       {
         title: "Studi Lanjut 1",
-        href: "/studilanjut",
+        href: "/studilanjut1",
       },
       {
         title: "Studi Lanjut 2",
@@ -25,6 +26,7 @@ export const NavigationList: INavItem[] = [
   },
   {
     title: "Karir Profesional",
+    href: "/karirprofesional",
     children: [
       {
         title: "Karir Profesional 1",

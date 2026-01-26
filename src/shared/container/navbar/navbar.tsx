@@ -31,7 +31,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="border border-opacity-50 flex mt-4 items-center justify-between p-4 rounded-full mx-72 bg-white shadow-lg">
+    <nav className="border border-opacity-50 flex mt-4 items-center justify-between p-4 rounded-full mx-48 bg-white shadow-lg">
       
       <section>
         <a href="/" className="text-xl font-bold">
@@ -49,12 +49,14 @@ export default function Navbar() {
           >
             {item.children ? (
               <>
-                <button className="hover:text-blue-600 font-medium">
-                  {item.title} <CaretDownOutlined />
-                </button>
+                <a href={item.href} >
+                  <button className="hover:text-blue-600 font-medium">
+                    {item.title} <CaretDownOutlined />
+                  </button>  
+                </a>
 
                 {openDropdown === item.title && (
-                  <div className="absolute left-0 top-full mt-2 bg-white shadow-lg rounded-md min-w-[200px] py-2 z-50">
+                  <div className="absolute left-0 top-full mt-0 bg-white shadow-lg rounded-md min-w-[200px] py-2 z-50">
                     {item.children.map((child) => (
                       <a
                         key={child.title}
