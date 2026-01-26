@@ -34,7 +34,7 @@ export default function Footer() {
     const alamat = "Sales Business Center Jl. Gangga No.10, Kec. Wagir, Kota Malang, Jawa Timur 65148";
 
   return (
-    <div className='my-10 bg-gradient-to-r space-y-10 mx-20 text-Kzen-light from-Kzen-primary from-50% to-Kzen-secondary px-8 py-10 rounded-3xl'>
+    <div className='my-10 space-y-10 mx-20 text-Kzen-light bg-[linear-gradient(to_right,#08456D,#0068AD_40%,#2D82BB_60%,#549AC8_80%,#ABCDE4_90%,#cee3f0)] px-8 py-10 rounded-3xl'>
         <div className='grid grid-cols-4 justify-between gap-20'>
             <div className='flex flex-col gap-6'>
                 <div className='flex flex-col gap-4'>
