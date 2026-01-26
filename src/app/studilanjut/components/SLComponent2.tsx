@@ -1,5 +1,5 @@
 import React from 'react'
-import { AdvanceListLP2 } from '@/shared/models/static/AdvanceList'
+import { AdvanceListChina } from '@/shared/models/static/AdvanceList'
 import Image from 'next/image'
 
 export default function SLComponent2() {
@@ -10,7 +10,7 @@ export default function SLComponent2() {
             <p className='text-xl font-extralight'>Alasan studi lanjut di luar negeri akan jadi keputusan terbaikmu!</p>
         </section>
         <section className='grid grid-cols-4 gap-7'>
-            {AdvanceListLP2.map((advance, index) => (
+            {AdvanceListChina.map((advance, index) => (
                 <div key={index} className='flex border rounded-2xl items-center'>
                     <div className='w-1/6 h-full rounded-l-2xl p-2 bg-Kzen-neutral/10 items-center justify-center flex border-r-2'>
                         <Image

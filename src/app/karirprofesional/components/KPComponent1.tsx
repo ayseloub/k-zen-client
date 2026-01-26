@@ -43,7 +43,7 @@ export default function KPComponent1() {
                 <Image
                     src={img}
                     alt='hero'
-                    width={600}
+                    width={500}
                     className=''
                 />
             </div>
