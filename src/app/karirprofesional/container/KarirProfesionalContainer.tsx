@@ -8,6 +8,7 @@ import KPComponent6 from '../components/KPComponent6'
 import KPComponent7 from '../components/KPComponent7'
 import KPComponent8 from '../components/KPComponent8'
 import KPComponent9 from '../components/KPComponent9'
+import KPComponent10 from '../components/KPComponent10'
 
 export default function KarirProfesionalContainer() {
   return (
@@ -21,6 +22,7 @@ export default function KarirProfesionalContainer() {
         <KPComponent7 />
         <KPComponent8 />
         <KPComponent9 />
+        <KPComponent10 />
     </>
   )
 }
