@@ -3,6 +3,7 @@ import HomeComponents1 from '../components/HomeComponents1'
 import HomeComponents2 from '../components/HomeComponents2'
 import HomeComponents3 from '../components/HomeComponents3'
 import HomeComponents4 from '@/shared/container/testimony/TestimonyContainer'
+import HomeComponents5 from '../components/HomeComponents5'
 import HomeComponents6 from '../components/HomeComponents6'
 import HomeComponents8 from '../components/HomeComponents8'
 import HomeComponents9 from '../components/HomeComponents9'
@@ -15,6 +16,7 @@ export default function HomeContainer() {
       <HomeComponents2 />
       <HomeComponents3 />
       <HomeComponents4 />
+      <HomeComponents5 />
       <HomeComponents6 />
       <HomeComponents8 />
       <HomeComponents9 />
