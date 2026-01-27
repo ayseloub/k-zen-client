@@ -3,7 +3,7 @@ import Content from '@/shared/container/testimony/TestimonyContainer'
 
 export default function KPComponent8() {
   return (
-    <div className='overflow-visible w-full px-20 py-10'>
+    <div className='overflow-visible w-full px-20 py-10 overflow-x-hidden'>
         <section className='py-10 overflow-visible'>
             <h1 className='text-9xl relative left-[-200px] font-bold bg-gradient-to-r from-[#9100AE0F] from-6% via-[#878DFFA3] via-64% to-[#668AFF80] to-50% bg-clip-text text-transparent opacity-20 leading-tight'>
                 Apa Kata KZeners Tentang

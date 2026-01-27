@@ -57,7 +57,6 @@ export default function PackageCard({
             <Image
               src={heroImage}
               alt='package hero'
-              width={350}
               height={450}
               className='object-contain'
             />
