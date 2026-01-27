@@ -19,7 +19,7 @@ export default function SLComponent7() {
   };
 
   const studiWebinars = WebinarInfoDummy.filter(
-    (webinar) => webinar.category === 'studi'
+    (webinar) => webinar.category === 'karir'
   );
 
   return (
