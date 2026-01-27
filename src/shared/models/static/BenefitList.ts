@@ -25,18 +25,9 @@ export const KarirBenefit : IBenefit [] = [
 export const StudiBenefit : IBenefit [] = [
     {
         value: [
-            "Fasilitas akomodasi lengkap",
-            "Raih kesempatan untuk meniti karier gemilang",
-            "Bersama K-Zen karier di luar negeri akan menjadi kenyataan"
+            "Mentoring dengan mentor berpengalaman",
+            "Kesempatan raih beasiswa 100%",
         ],
-        country: "japan"
-    },
-    {
-        value: [
-            "Lorem ipsum dolor sit amet",
-            "Lorem ipsum dolor sit amet",
-            "Lorem ipsum dolor sit amet"
-        ],
-        country: "kanada"
+        country: "china"
     },
 ]

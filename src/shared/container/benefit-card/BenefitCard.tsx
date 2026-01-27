@@ -28,17 +28,26 @@ export default function BenefitCard({
   const activeBenefit = benefitData.find(benefit => benefit.country === activeCountry);
 
   const getCountryLabel = (country: string) => {
-    return country === 'japan' ? 'Jepang' : 'Kanada';
+    switch(country.toLowerCase()) {
+      case 'japan': return 'Jepang';
+      case 'kanada': return 'Kanada';
+      case 'china': return 'China';
+      default: return country;
+    }
   };
 
   const getCountryFlag = (country: string) => {
-    return country === 'japan' ? '🇯🇵' : '🇨🇦';
+    switch(country.toLowerCase()) {
+      case 'japan': return '🇯🇵';
+      case 'kanada': return '🇨🇦';
+      case 'china': return '🇨🇳';
+      default: return '🌏';
+    }
   };
 
   return (
     <div className='py-20'>
       <div className='flex items-center gap-16'>
-        {/* Left - Hero Image with fade */}
         <div className='relative flex-shrink-0'>
           <Image
             src={heroImage}
@@ -53,19 +62,15 @@ export default function BenefitCard({
           />
         </div>
 
-        {/* Right - Content */}
         <div className='ml-20 flex-1'>
-          {/* Title */}
           <h1 className='text-5xl font-semibold mb-4'>
             <span dangerouslySetInnerHTML={{ __html: title }} />
           </h1>
           
-          {/* Subtitle */}
           <p className='text-xl font-light text-Kzen-neutral/80 mb-8'>
             <span dangerouslySetInnerHTML={{ __html: subtitle }} />
           </p>
 
-          {/* Country Tabs */}
           <div className='flex gap-4 mb-8'>
             {benefitData.map((benefit) => (
               <button
@@ -83,7 +88,6 @@ export default function BenefitCard({
             ))}
           </div>
 
-          {/* Benefits List */}
           <div className='mb-8'>
             <h3 className='text-xl font-semibold mb-4 text-Kzen-dark'>
               Benefit yang akan kamu dapatkan:
@@ -104,7 +108,6 @@ export default function BenefitCard({
             </div>
           </div>
 
-          {/* CTA Button */}
           <button className='bg-gradient-to-r from-Kzen-primary to-Kzen-secondary text-white px-10 py-4 rounded-full text-lg font-extralight shadow-xl hover:shadow-2xl hover:scale-105 transition-all'>
             {buttonText}
           </button>

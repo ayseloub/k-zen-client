@@ -7,6 +7,7 @@ import SLComponent5 from '../components/SLComponent5'
 import SLComponent6 from '../components/SLComponent6'
 import SLComponent7 from '../components/SLComponent7'
 import SLComponent8 from '../components/SLComponent8'
+import SLComponent9 from '../components/SLComponent9'
 
 export default function StudiLanjutContainer() {
   return (
@@ -19,6 +20,7 @@ export default function StudiLanjutContainer() {
         <SLComponent6 />
         <SLComponent7 />
         <SLComponent8 />
+        <SLComponent9 />
     </>
   )
 }
