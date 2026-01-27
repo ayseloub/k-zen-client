@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { WebinarInfoDummy } from '@/shared/models/static/WebinarInfoDummy';
-import WebinarCard from '../assets/WebinarCard';
+import WebinarCard from '../../../shared/container/webinar-card/WebinarCard';
 
 type TabType = 'karir' | 'studi';
 
