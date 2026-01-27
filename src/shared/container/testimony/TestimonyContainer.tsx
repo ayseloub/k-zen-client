@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { TestimonyDummy } from '@/shared/models/static/TestimonyDummy';
 import pict from '@/shared/assets/images/TestimonyPict.png';
 
-export default function HomeComponents4() {
+export default function TestimonyContainer() {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeTestimony = TestimonyDummy[activeIndex];
 
@@ -46,6 +46,10 @@ export default function HomeComponents4() {
                 src={pict}
                 alt="testimony"
                 width={500}
+                style={{
+                  maskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)',
+                  WebkitMaskImage: 'linear-gradient(to bottom, black 70%, transparent 100%)'
+                }}
               />
             </div>
           </div>

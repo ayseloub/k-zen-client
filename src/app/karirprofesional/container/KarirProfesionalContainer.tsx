@@ -5,7 +5,7 @@ import KPComponent3 from '../components/KPComponent3'
 import KPComponent4 from '../components/KPComponent4'
 import KPComponent5 from '../components/KPComponent5'
 import KPComponent7 from '../components/KPComponent7'
-import KPComponent8 from '@/shared/container/testimony/TestimonyContainer'
+import KPComponent8 from '../components/KPComponent8'
 
 export default function KarirProfesionalContainer() {
   return (
