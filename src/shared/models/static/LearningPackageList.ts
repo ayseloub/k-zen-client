@@ -43,3 +43,29 @@ export const StudiPackage : IPackage [] = [
         type: "Platinum",
     },
 ]
+
+export const KarirPackage : IPackage [] = [
+    {
+        value: [
+            "Lorem ipsum",
+            "Lorem ipsum dolor",
+            "Lorem ipsum dolor",
+            "Lorem ipsum dolor",
+            "Lorem ipsum dolor"
+        ],
+        price: "RpXXXXXXXX",
+        total: "Rpxx.xxxx",
+        type: "Silver",
+    },
+    {
+        value: [
+            "Bimbingan Mentor",
+            "Latihan Soal",
+            "Bahasa Inggris Dasar",
+            "Bahasa Inggris Lanjut",
+        ],
+        price: "RpXXXXXXXX",
+        total: "Rpxx.xxxx",
+        type: "Gold",
+    },
+]

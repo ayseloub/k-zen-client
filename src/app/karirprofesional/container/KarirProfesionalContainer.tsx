@@ -4,6 +4,7 @@ import KPComponent2 from '../components/KPComponent2'
 import KPComponent3 from '../components/KPComponent3'
 import KPComponent4 from '../components/KPComponent4'
 import KPComponent5 from '../components/KPComponent5'
+import KPComponent6 from '../components/KPComponent6'
 import KPComponent7 from '../components/KPComponent7'
 import KPComponent8 from '../components/KPComponent8'
 
@@ -15,6 +16,7 @@ export default function KarirProfesionalContainer() {
         <KPComponent3 />
         <KPComponent4 />
         <KPComponent5 />
+        <KPComponent6 />
         <KPComponent7 />
         <KPComponent8 />
     </>
