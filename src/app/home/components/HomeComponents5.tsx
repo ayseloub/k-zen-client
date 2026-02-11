@@ -44,36 +44,38 @@ export default function HomeComponents5() {
 
   return (
     <div className='py-20'>
-      <div className='text-center mb-12'>
-        <h1 className='text-5xl font-semibold mb-4'>
-          1000+ K-Zeners <span className='text-Kzen-primary'>Telah Percaya</span> Kepada Kami
-        </h1>
-        <p className='text-xl font-light text-Kzen-neutral/80'>
-          Tingkatkan karier profesional dan studi lanjut kamu bersama K-Zen
-        </p>
-      </div>
+      <div className='flex justify-between p-10'>
+        <div className='text-center mb-12'>
+          <h1 className='text-5xl font-semibold mb-4'>
+            1000+ K-Zeners <span className='text-Kzen-primary'>Telah Percaya</span> Kepada Kami
+          </h1>
+          <p className='text-xl font-light text-Kzen-neutral/80'>
+            Tingkatkan karier profesional dan studi lanjut kamu bersama K-Zen
+          </p>
+        </div>
 
-      <div className='flex justify-center gap-8 mb-12'>
-        <button
-          onClick={() => handleCategoryChange('karir')}
-          className={`text-xl pb-2 font-semibold transition-all ${
-            activeCategory === 'karir'
-              ? 'text-Kzen-primary border-b-2 border-Kzen-primary'
-              : 'text-Kzen-neutral/70 hover:text-Kzen-primary'
-          }`}
-        >
-          Karier Profesional
-        </button>
-        <button
-          onClick={() => handleCategoryChange('studi')}
-          className={`text-xl pb-2 font-semibold transition-all ${
-            activeCategory === 'studi'
-              ? 'text-Kzen-primary border-b-2 border-Kzen-primary'
-              : 'text-Kzen-neutral/70 hover:text-Kzen-primary'
-          }`}
-        >
-          Studi Lanjut
-        </button>
+        <div className='flex justify-center gap-8 mb-12'>
+          <button
+            onClick={() => handleCategoryChange('karir')}
+            className={`text-xl pb-2 font-semibold transition-all ${
+              activeCategory === 'karir'
+                ? 'text-Kzen-primary border-b-2 border-Kzen-primary'
+                : 'text-Kzen-neutral/70 hover:text-Kzen-primary'
+            }`}
+          >
+            Karier Profesional
+          </button>
+          <button
+            onClick={() => handleCategoryChange('studi')}
+            className={`text-xl pb-2 font-semibold transition-all ${
+              activeCategory === 'studi'
+                ? 'text-Kzen-primary border-b-2 border-Kzen-primary'
+                : 'text-Kzen-neutral/70 hover:text-Kzen-primary'
+            }`}
+          >
+            Studi Lanjut
+          </button>
+        </div>
       </div>
 
       <div className='flex items-center gap-32'>

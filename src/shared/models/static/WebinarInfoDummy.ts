@@ -17,7 +17,7 @@ interface IBlogInfoDummy {
     title: string;
     description: string;
     date: string;
-    image?: string | StaticImageData;
+    image: string | StaticImageData;
     category: 'karir' | 'studi';
 }
 
@@ -61,6 +61,90 @@ export const WebinarInfoDummy: IWebinarInfoDummy[] = [
 ]
 
 export const BlogInfoDummy: IBlogInfoDummy[] = [
+    {
+        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
+        date: "10 januari 2025",
+        image: pict2,
+        category: 'karir', 
+    },
+    {
+        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
+        date: "10 januari 2025",
+        image: pict2,
+        category: 'studi',
+    },
+    {
+        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
+        date: "10 januari 2025",
+        image: pict2,
+        category: 'karir',
+    },
+    {
+        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
+        date: "15 januari 2025",
+        image: pict2,
+        category: 'studi',
+    },
+    {
+        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
+        date: "10 januari 2025",
+        image: pict2,
+        category: 'karir', 
+    },
+    {
+        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
+        date: "10 januari 2025",
+        image: pict2,
+        category: 'studi',
+    },
+    {
+        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
+        date: "10 januari 2025",
+        image: pict2,
+        category: 'karir',
+    },
+    {
+        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
+        date: "15 januari 2025",
+        image: pict2,
+        category: 'studi',
+    },
+    {
+        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
+        date: "10 januari 2025",
+        image: pict2,
+        category: 'karir', 
+    },
+    {
+        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
+        date: "10 januari 2025",
+        image: pict2,
+        category: 'studi',
+    },
+    {
+        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
+        date: "10 januari 2025",
+        image: pict2,
+        category: 'karir',
+    },
+    {
+        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
+        date: "15 januari 2025",
+        image: pict2,
+        category: 'studi',
+    },
     {
         title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
