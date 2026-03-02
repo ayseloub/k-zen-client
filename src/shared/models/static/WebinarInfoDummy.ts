@@ -7,9 +7,9 @@ interface IWebinarInfoDummy {
     title: string;
     description: string;
     date: string;
-    time?: string;
+    time: string;
     price: string;
-    image?: string | StaticImageData;
+    image: string | StaticImageData;
     category: 'karir' | 'studi';
 }
 
@@ -20,6 +20,7 @@ interface IBlogInfoDummy {
     image: string | StaticImageData;
     category: 'karir' | 'studi';
 }
+
 
 export const WebinarInfoDummy: IWebinarInfoDummy[] = [
     {
@@ -62,115 +63,144 @@ export const WebinarInfoDummy: IWebinarInfoDummy[] = [
 
 export const BlogInfoDummy: IBlogInfoDummy[] = [
     {
-        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
+        title: "Karir Blog: Lorem ipsum dolor sit amet, consecte adipiscing elit",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
         date: "10 januari 2025",
         image: pict2,
         category: 'karir', 
     },
     {
-        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
+        title: "Studi Blog: Lorem ipsum dolor sit amet, consecte adipiscing elit",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
         date: "10 januari 2025",
         image: pict2,
         category: 'studi',
     },
     {
-        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
-        date: "10 januari 2025",
-        image: pict2,
-        category: 'karir',
-    },
-    {
-        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
-        date: "15 januari 2025",
-        image: pict2,
-        category: 'studi',
-    },
-    {
-        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
+        title: "Karir Blog: Lorem ipsum dolor sit amet, consecte adipiscing elit",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
         date: "10 januari 2025",
         image: pict2,
         category: 'karir', 
     },
     {
-        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
+        title: "Studi Blog: Lorem ipsum dolor sit amet, consecte adipiscing elit",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
         date: "10 januari 2025",
         image: pict2,
         category: 'studi',
     },
     {
-        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
-        date: "10 januari 2025",
-        image: pict2,
-        category: 'karir',
-    },
-    {
-        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
-        date: "15 januari 2025",
-        image: pict2,
-        category: 'studi',
-    },
-    {
-        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
+        title: "Karir Blog: Lorem ipsum dolor sit amet, consecte adipiscing elit",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
         date: "10 januari 2025",
         image: pict2,
         category: 'karir', 
     },
     {
-        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
+        title: "Studi Blog: Lorem ipsum dolor sit amet, consecte adipiscing elit",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
         date: "10 januari 2025",
         image: pict2,
         category: 'studi',
     },
     {
-        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
-        date: "10 januari 2025",
-        image: pict2,
-        category: 'karir',
-    },
-    {
-        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
-        date: "15 januari 2025",
-        image: pict2,
-        category: 'studi',
-    },
-    {
-        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
+        title: "Karir Blog: Lorem ipsum dolor sit amet, consecte adipiscing elit",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
         date: "10 januari 2025",
         image: pict2,
         category: 'karir', 
     },
     {
-        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
+        title: "Studi Blog: Lorem ipsum dolor sit amet, consecte adipiscing elit",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
         date: "10 januari 2025",
         image: pict2,
         category: 'studi',
     },
     {
-        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
+        title: "Karir Blog: Lorem ipsum dolor sit amet, consecte adipiscing elit",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
         date: "10 januari 2025",
         image: pict2,
-        category: 'karir',
+        category: 'karir', 
     },
     {
-        title: "Lorem ipsum dolor sit amet, consecte adipiscing elit",
+        title: "Studi Blog: Lorem ipsum dolor sit amet, consecte adipiscing elit",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
-        date: "15 januari 2025",
+        date: "10 januari 2025",
         image: pict2,
         category: 'studi',
     },
+    {
+        title: "Karir Blog: Lorem ipsum dolor sit amet, consecte adipiscing elit",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
+        date: "10 januari 2025",
+        image: pict2,
+        category: 'karir', 
+    },
+    {
+        title: "Studi Blog: Lorem ipsum dolor sit amet, consecte adipiscing elit",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun ut labore et dolore magna aliqua.",
+        date: "10 januari 2025",
+        image: pict2,
+        category: 'studi',
+    },
+]
+
+interface ISertifikasiInfoDummy {
+    title: string;
+    location: string;
+    price: string;
+}
+
+export const SertifikasiInfoDummy: ISertifikasiInfoDummy[] = [
+    {
+        title: "Sertifikasi Bahasa Mandarin",
+        location: "China",
+        price: "Rp150.000",
+    },
+    {
+        title: "Sertifikasi ABC",
+        location: "Jepang",
+        price: "Rp150.000",
+    },
+    {
+        title: "Sertifikasi Bahasa Jepang",
+        location: "Jepang",
+        price: "Rp150.000",
+    },
+    {
+        title: "Sertifikasi Keahlian Perawat Lansia",
+        location: "Jepang",
+        price: "Rp150.000",
+    }
+]
+
+export const KursusInfoDummy: ISertifikasiInfoDummy[] = [
+    {
+        title: "Paket Silver Kelas Bahasa Persiapan China",
+        location: "China",
+        price: "Rp150.000",
+    },
+    {
+        title: "Paket Platinum Kelas Bahasa Persiapan China",
+        location: "China",
+        price: "Rp150.000",
+    },
+    {
+        title: "Paket Gold Kelas Bahasa Persiapan China",
+        location: "Jepang",
+        price: "Rp150.000",
+    },
+    {
+        title: "Paket Silver Kelas Bahasa Persiapan Kanada",
+        location: "Kanada",
+        price: "Rp150.000",
+    },
+    {
+        title: "Paket Gold Kelas Bahasa Persiapan Kanada",
+        location: "Kanada",
+        price: "Rp150.000",
+    }
 ]

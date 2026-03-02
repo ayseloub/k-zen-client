@@ -1,4 +1,3 @@
-
 import KarirProfesionalContainer from './container/KarirProfesionalContainer';
 import Footer from '@/shared/container/footer/footer';
 
