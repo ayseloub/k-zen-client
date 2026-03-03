@@ -12,7 +12,7 @@ interface IBlogCard {
 
 export default function ArtikelCard({ title, description, date, image }: IBlogCard) {
     return (
-        <div className='flex flex-col gap-3'>
+        <div className='flex flex-col gap-3' >
             <div className='relative w-full h-[200px] rounded-2xl overflow-hidden'>
                 <Image 
                     src={image} 
