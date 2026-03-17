@@ -12,7 +12,7 @@ export default function HomeComponents1() {
             Langkah Pasti Menuju    
          </h1>
          <h1 className='text-Kzen-dark font-semibold text-4xl flex gap-2'><p className='text-Kzen-primary'>Studi & Karir</p> Internasional</h1>
-         <p className='font-light text-2xl mt-2 flex gap-2'>We Guide You <p className='text-Kzen-primary'>#FromZerotoGlobal</p></p>
+         <p className='font-light text-2xl mt-2 flex gap-2'>We Guide You <span className='text-Kzen-primary'>#FromZerotoGlobal</span></p>
          <ConsultationBox />
         </section>
         <section>
