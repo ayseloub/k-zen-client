@@ -136,7 +136,6 @@ export default function ProfileLayout({
   useEffect(() => {
     getUserProfile().then((data) => {
       setUser(data);
-      // hanya tampilkan modal di halaman profile, bukan di halaman edit
       if (data && hasIncompleteProfile(data) && pathname !== '/profile/edit') {
         setShowCompleteModal(true);
       }
@@ -145,21 +144,21 @@ export default function ProfileLayout({
 
   return (
     <ErrorBoundary FallbackComponent={CustomErrorBoundary}>
-      <Navbar />
-      <div className=''>
+      <div className='h-screen bg-gray-50'>
+        <Navbar />
         <div className='max-w-7xl mx-auto px-6 py-8 flex gap-6'>
           <ProfileSider />
           <main className='flex-1'>
             {children}
           </main>
         </div>
-      </div>
-      <Footer />
+        <Footer />
 
-      <CompleteProfileModal
-        open={showCompleteModal}
-        onClose={() => setShowCompleteModal(false)}
-      />
+        <CompleteProfileModal
+          open={showCompleteModal}
+          onClose={() => setShowCompleteModal(false)}
+        />
+      </div>
     </ErrorBoundary>
   );
 }
