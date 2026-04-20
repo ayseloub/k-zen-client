@@ -14,7 +14,7 @@ export const StudiPackage : IPackage [] = [
             "Lorem ipsum dolor",
             "Lorem ipsum dolor"
         ],
-        price: "RpXXXXXXXX",
+        price: "Rp3.000.000",
         total: "Rpxx.xxxx",
         type: "Silver",
     },
@@ -26,7 +26,7 @@ export const StudiPackage : IPackage [] = [
             "Lorem ipsum dolor",
             "Lorem ipsum dolor"
         ],
-        price: "RpXXXXXXXX",
+        price: "Rp3.000.000",
         total: "Rpxx.xxxx",
         type: "Gold",
     },
@@ -38,7 +38,7 @@ export const StudiPackage : IPackage [] = [
             "Bahasa Inggris Lanjut",
             "Bahasa Mandarin"
         ],
-        price: "RpXXXXXXXX",
+        price: "Rp3.000.000",
         total: "Rp45.833",
         type: "Platinum",
     },
@@ -53,7 +53,7 @@ export const KarirPackage : IPackage [] = [
             "Lorem ipsum dolor",
             "Lorem ipsum dolor"
         ],
-        price: "RpXXXXXXXX",
+        price: "Rp3.000.000",
         total: "Rpxx.xxxx",
         type: "Silver",
     },
@@ -64,7 +64,7 @@ export const KarirPackage : IPackage [] = [
             "Bahasa Inggris Dasar",
             "Bahasa Inggris Lanjut",
         ],
-        price: "RpXXXXXXXX",
+        price: "Rp3.000.000",
         total: "Rpxx.xxxx",
         type: "Gold",
     },

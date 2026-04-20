@@ -8,8 +8,8 @@ import SertifikasiIcon from '@/shared/assets/images/Nav-Icon/Sertifikasi.png';
 interface INavItem {
   title: string;
   href?: string;
-  icon?: StaticImageData; // Icon untuk dropdown children
-  description?: string; // Description untuk dropdown children
+  icon?: StaticImageData;
+  description?: string;
   children?: INavItem[];
 }
 

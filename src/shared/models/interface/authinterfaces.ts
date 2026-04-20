@@ -47,3 +47,47 @@ export interface IResetPasswordPayloadRoot {
 }
 
 export type IResetPasswordResponseRoot = ApiResponse<null>;
+
+export interface IUserProfile {
+  id: number | null;
+  avatar: string | null;
+  email: string;
+  fullname: string;
+  nik: string | null;
+  gender: string | null;
+  phone: string | null;
+  address: string | null;
+  domicile_address: string | null;
+  religion: string | null;
+  place_of_birth: string | null;
+  date_of_birth: string | null;
+  last_education: string | null;
+  major: string | null;
+  height: number | null;
+}
+
+export type IUserProfileResponse = ApiResponse<IUserProfile>;
+
+export interface IUpdateProfilePayload {
+  avatar?: File | null;
+  fullname?: string;
+  nik?: string;
+  gender?: string;
+  phone?: string;
+  address?: string;
+  domicile_address?: string;
+  religion?: string;
+  place_of_birth?: string;
+  date_of_birth?: string;
+  last_education?: string;
+  major?: string;
+  height?: string;
+
+  ktp?: File | null;
+  kk?: File | null;
+  akta_kelahiran?: File | null;
+
+  ijazah?: File | null;
+}
+
+export type IUpdateProfileResponse = ApiResponse<IUserProfile>;

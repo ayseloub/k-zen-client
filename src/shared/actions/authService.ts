@@ -12,8 +12,13 @@ import { ILoginPayloadRoot,
         IForgotPasswordPayloadRoot,
         IForgotPasswordResponseRoot,
         IResetPasswordPayloadRoot,
-        IResetPasswordResponseRoot } 
+        IResetPasswordResponseRoot,
+        IUserProfile,
+        IUserProfileResponse,
+        IUpdateProfilePayload,
+        IUpdateProfileResponse, } 
 from "@/shared/models/interface/authinterfaces";
+import { ApiResponse } from '@/shared/models/interface/generalinterfaces';
 
 const BASE_API_URL = process.env.BASE_API_URL;
 
@@ -46,9 +51,6 @@ export async function login(request: ILoginPayloadRoot): Promise<ILoginResult> {
 
     const data: ILoginResponseRoot = await response.json();
 
-    console.log('[api response status]', response.status);
-    console.log('[api response data]', data);
-
     if (!response.ok || data.status !== 'success') {
       return {
         success: false,
@@ -58,7 +60,7 @@ export async function login(request: ILoginPayloadRoot): Promise<ILoginResult> {
 
     const cookieStore = await cookies();
     cookieStore.set('token', data.data.token, {
-      httpOnly: true,
+      httpOnly: false,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'lax',
       path: '/',
@@ -260,6 +262,114 @@ export async function googleCallback(code: string): Promise<ILoginResult> {
     return { success: true, token: data.data.token, message: data.message };
   } catch (error) {
     console.error('[googleCallback error]', error);
+    return {
+      success: false,
+      message: error instanceof Error ? error.message : 'Terjadi kesalahan',
+    };
+  }
+}
+
+export async function logout(): Promise<IActionResult> {
+  try {
+    if (!BASE_API_URL) throw new Error('API URL is not configured');
+
+    const cookieStore = await cookies();
+    const token = cookieStore.get('token');
+
+    const response = await fetch(`${BASE_API_URL}/auth/logout`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${token?.value}`,
+      },
+      cache: 'no-store',
+    });
+
+    const data: ApiResponse<null> = await response.json();
+
+    if (!response.ok || data.status !== 'success') {
+      return { success: false, message: data.message || 'Logout gagal' };
+    }
+
+    cookieStore.delete('token');
+
+    return { success: true, message: data.message };
+  } catch (error) {
+    console.error('[logout error]', error);
+    return {
+      success: false,
+      message: error instanceof Error ? error.message : 'Terjadi kesalahan saat logout',
+    };
+  }
+}
+
+export async function getToken(): Promise<string | null> {
+  const cookieStore = await cookies();
+  const token = cookieStore.get('token');
+  return token?.value ?? null;
+}
+
+export async function getUserProfile(): Promise<IUserProfile | null> {
+  try {
+    if (!BASE_API_URL) throw new Error('API URL is not configured');
+
+    const cookieStore = await cookies();
+    const token = cookieStore.get('token');
+
+    if (!token) return null;
+
+    const response = await fetch(`${BASE_API_URL}/user`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${token.value}`,
+      },
+      cache: 'no-store',
+    });
+
+    const data: IUserProfileResponse = await response.json();
+
+    if (!response.ok || data.status !== 'success') return null;
+
+    return data.data;
+  } catch (error) {
+    console.error('[getUserProfile error]', error);
+    return null;
+  }
+}
+
+export async function updateProfile(formData: FormData): Promise<IActionResult> {
+  try {
+    if (!BASE_API_URL) throw new Error('API URL is not configured');
+
+    const cookieStore = await cookies();
+    const token = cookieStore.get('token');
+
+    if (!token) throw new Error('Token tidak ditemukan');
+
+    formData.append('_method', 'PATCH');
+
+    const response = await fetch(`${BASE_API_URL}/user`, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${token.value}`,
+      },
+      body: formData,
+      cache: 'no-store',
+    });
+
+    const data: IUpdateProfileResponse = await response.json();
+
+    if (!response.ok || data.status !== 'success') {
+      return { success: false, message: data.message || 'Gagal update profile' };
+    }
+
+    return { success: true, message: data.message };
+  } catch (error) {
+    console.error('[updateProfile error]', error);
     return {
       success: false,
       message: error instanceof Error ? error.message : 'Terjadi kesalahan',
