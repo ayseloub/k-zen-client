@@ -1,20 +1,39 @@
 'use client';
-import React, { useState } from 'react';
+import React, { act, useState } from 'react';
 import Image from 'next/image';
 import check from "@/shared/assets/images/check.png";
 import heroKarir from "@/shared/assets/images/KarirBenefitHero.png";
 import heroStudi from "@/shared/assets/images/StudiBenefitHero.png";
 import { KarirBenefit, StudiBenefit } from '@/shared/models/static/BenefitList';
+import { useRouter } from 'next/navigation';
 
 type Category = 'karir' | 'studi';
 
 export default function HomeComponents5() {
   const [activeCategory, setActiveCategory] = useState<Category>('karir');
   const [activeCountry, setActiveCountry] = useState<string>('japan');
-
+  
   const categoryData = activeCategory === 'karir' ? KarirBenefit : StudiBenefit;
   
   const activeBenefit = categoryData.find(item => item.country === activeCountry);
+
+  const router = useRouter();
+  
+  const handleSelengkapnya = () => {
+    if (activeCategory === 'karir') {
+      router.push(`/karirprofesional`);
+    } else {
+      router.push(`/studilanjut`);
+    }
+  };
+  
+  const handleDaftar = () => {
+    if (activeCategory === 'karir') {
+      router.push(`/daftar-posisi?program=karier&country=${getCountryLabel(activeCountry)}`);
+    } else {
+      router.push(`/daftar-posisi?program=studi&country=${getCountryLabel(activeCountry)}`);
+    }
+  };
   
   const handleCategoryChange = (category: Category) => {
     setActiveCategory(category);
@@ -137,10 +156,10 @@ export default function HomeComponents5() {
           </div>
 
           <div className='flex gap-4'>
-            <button className='bg-gradient-to-r from-Kzen-primary to-Kzen-secondary text-white px-8 py-3 rounded-full font-semibold shadow-xl hover:shadow-2xl hover:scale-105 transition-all'>
+            <button onClick={handleDaftar} className='bg-gradient-to-r from-Kzen-primary to-Kzen-secondary text-white px-8 py-3 rounded-full font-semibold shadow-xl hover:shadow-2xl hover:scale-105 transition-all'>
               Daftar Sekarang
             </button>
-            <button className='bg-white text-Kzen-primary border-2 border-Kzen-primary px-8 py-3 rounded-full font-semibold hover:bg-Kzen-primary hover:text-white transition-all'>
+            <button onClick={handleSelengkapnya} className='bg-white text-Kzen-primary border-2 border-Kzen-primary px-8 py-3 rounded-full font-semibold hover:bg-Kzen-primary hover:text-white transition-all'>
               Selengkapnya
             </button>
           </div>

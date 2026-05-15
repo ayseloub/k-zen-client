@@ -39,14 +39,18 @@ export default function HomeComponents8() {
                             {item.answer.split('\n').map((paragraph, i) => (
                                 <p key={i}>{paragraph}</p>
                             ))}
+                            {item.point && item.point.length > 0 && (
+                                <ul className='list-disc list-inside space-y-2'>
+                                    {item.point.map((point, j) => (
+                                        <li key={j}>{point}</li>
+                                    ))}
+                                </ul>
+                            )}
                         </div>
                     )}
                 </div>
             ))}
         </div>
-        <button className='p-5 block mx-auto text-lg border border-Kzen-secondary py-3 px-10 text-Kzen-secondary hover:bg-Kzen-primary hover:text-Kzen-light rounded-full transition-colors'> 
-            Lihat Lainnya
-        </button>
     </div>
   )
 }

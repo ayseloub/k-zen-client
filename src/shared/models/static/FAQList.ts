@@ -1,23 +1,28 @@
 interface IFAQItem {
   question: string;
   answer: string;
+  point?: string[];
 }
 
 export const FAQList: IFAQItem[] = [
   {
-    question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    question: "Apa itu KZEN?",
+    answer: "KZEN merupakan platform yang berfokus pada layanan pendampingan pendidikan dan karier internasional. KZEN membantu peserta dalam merencanakan, mempersiapkan, hingga merealisasikan studi maupun pekerjaan di luar negeri melalui sistem yang terstruktur dan profesional."
   },
   {
-    question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    question: "Program apa saja yang tersedia di KZEN?",
+    answer: "KZEN menyediakan beberapa program utama, antara lain:",
+    point: [
+      "Program pendidikan ke luar negeri (study abroad), seperti kuliah di China",
+      "Program kerja ke luar negeri (work abroad), seperti Kanada dan Jepang"
+    ]
   },
   {
-    question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    question: "Apakah tersedia program beasiswa?",
+    answer: "Ya, tersedia beasiswa parsial hingga penuh, mencakup biaya pendidikan dan fasilitas tertentu."
   },
   {
-    question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    question: "Apakah perlu bahasa asing?",
+    answer: "Tidak semua program mewajibkan kemampuan bahasa atau interview."
   },
 ];

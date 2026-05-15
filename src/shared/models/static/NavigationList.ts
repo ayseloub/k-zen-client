@@ -15,6 +15,10 @@ interface INavItem {
 
 export const NavigationList: INavItem[] = [
   {
+    title: "Dashboard",
+    href: "/dashboard",
+  },
+  {
     title: "Tentang Kami",
     href: "/home",
   },
@@ -59,9 +63,5 @@ export const NavigationList: INavItem[] = [
         description: "Partner sertifikasi terakreditasi internasional untuk kebutuhan karier dan studimu",
       },
     ],
-  },
-  {
-    title: "Blog",
-    href: "/artikel",
   },
 ];
