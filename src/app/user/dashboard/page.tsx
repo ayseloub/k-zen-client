@@ -5,11 +5,9 @@ import Footer from '@/shared/container/footer/footer';
 export default function DashboardPage() {
   return (
     <>
-      <main className="">
         <Navbar />
-        <DashboardContainer />
+        <DashboardContainer />;
         <Footer />
-      </main>
     </>
-  );
+    ); 
 }

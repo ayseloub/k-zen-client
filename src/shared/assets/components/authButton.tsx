@@ -2,10 +2,13 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { logout } from '@/shared/actions/authService';
 import UserDropdown from './UserDropdown';
 
 export default function AuthButton() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const token = document.cookie
@@ -13,6 +16,25 @@ export default function AuthButton() {
       .find((row) => row.startsWith('token='));
     setIsLoggedIn(!!token);
   }, []);
+
+  useEffect(() => {
+    if (!isLoggedIn) return;
+
+    const checkToken = () => {
+      const token = document.cookie
+        .split('; ')
+        .find((row) => row.startsWith('token='));
+
+      if (!token) {
+        setIsLoggedIn(false);
+        logout();
+        router.replace('/auth/login');
+      }
+    };
+
+    const interval = setInterval(checkToken, 30000);
+    return () => clearInterval(interval);
+  }, [isLoggedIn, router]);
 
   if (isLoggedIn) {
     return <UserDropdown />;

@@ -1,6 +1,6 @@
 'use server'
 
-import { IRegion, IPosition, IProduct, IProductMeta } from '@/shared/models/interface/productInterfaces';
+import { IRegion, IPosition, IProduct, IProductMeta, IUserEnrollment, ITotalEnrollment } from '@/shared/models/interface/productInterfaces';
 import { cookies } from 'next/headers';
 
 const BASE_API_URL = process.env.NEXT_PUBLIC_BASE_URL;
@@ -104,5 +104,63 @@ export async function enrollProduct(formData: FormData): Promise<{ success: bool
   } catch (error) {
     console.error('[enrollProduct error]', error);
     return { success: false, message: error instanceof Error ? error.message : 'Terjadi kesalahan' };
+  }
+}
+
+export async function getUserEnrollments(): Promise<{ enrollments: IUserEnrollment[]; totals: ITotalEnrollment[] }> {
+  try {
+    const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+    if (!BASE_URL) throw new Error('API URL is not configured');
+
+    const cookieStore = await cookies();
+    const token = cookieStore.get('token');
+    if (!token) return { enrollments: [], totals: [] };
+
+    const response = await fetch(`${BASE_URL}/user/enrollment`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${token.value}`,
+      },
+      cache: 'no-store',
+    });
+
+    const result = await response.json();
+    if (!response.ok || result.status !== 'success') return { enrollments: [], totals: [] };
+
+    return {
+      enrollments: result.data?.enrollments ?? [],
+      totals: result.data?.total_enrollments ?? [],
+    };
+  } catch (error) {
+    console.error('[getUserEnrollments error]', error);
+    return { enrollments: [], totals: [] };
+  }
+}
+
+export async function getUserEnrollmentDetail(id: string): Promise<any | null> {
+  try {
+    const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+    if (!BASE_URL) throw new Error('API URL is not configured');
+
+    const cookieStore = await cookies();
+    const token = cookieStore.get('token');
+    if (!token) return null;
+
+    const response = await fetch(`${BASE_URL}/user/enrollment/${id}`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${token.value}`,
+      },
+      cache: 'no-store',
+    });
+
+    const result = await response.json();
+    if (!response.ok || result.status !== 'success') return null;
+    return result.data;
+  } catch (error) {
+    console.error('[getUserEnrollmentDetail error]', error);
+    return null;
   }
 }

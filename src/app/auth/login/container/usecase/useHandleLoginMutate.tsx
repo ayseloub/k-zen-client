@@ -22,7 +22,9 @@ export const useHandleLoginMutate = (form: FormInstance) => {
 
       if (res.success) {
         message.success(res.message);
-        router.replace('/home');
+        const params = new URLSearchParams(window.location.search);
+        const redirect = params.get('redirect') ?? '/user/dashboard';
+        router.replace(redirect);
       } else {
         message.error(res.message);
       }

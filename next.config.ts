@@ -8,6 +8,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'cdn.kzen.biz.id',
       },
+      {
+        protocol: 'https',
+        hostname: 'blob.kzenkarier.id',
+      },
     ],
   },
 };

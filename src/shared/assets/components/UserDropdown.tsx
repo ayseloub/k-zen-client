@@ -3,14 +3,21 @@
 import { useRef, useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { message } from 'antd';
-import { logout } from '@/shared/actions/authService';
+import { logout, getUserProfile } from '@/shared/actions/authService';
+import { IUserProfile } from '@/shared/models/interface/authinterfaces';
 import { Icon } from '@iconify/react';
+import Image from 'next/image';
 
 export default function UserDropdown() {
   const [open, setOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [user, setUser] = useState<IUserProfile | null>(null);
   const ref = useRef<HTMLDivElement>(null);
   const router = useRouter();
+
+  useEffect(() => {
+    getUserProfile().then(setUser);
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -37,16 +44,28 @@ export default function UserDropdown() {
     }
   };
 
+  const initial = user?.fullname?.charAt(0)?.toUpperCase() ?? 'U';
+
   return (
     <div ref={ref} className='relative'>
       <button
         onClick={() => setOpen(!open)}
         className='flex items-center gap-2'
       >
-        <div className='w-9 h-9 rounded-full bg-gradient-to-r from-Kzen-primary to-Kzen-secondary flex items-center justify-center text-white font-semibold'>
-          U
-        </div>
-        <Icon icon="basil:caret-down-outline" width="24" height="24" className='text-Kzen-dark'/>
+        {user?.avatar ? (
+          <Image
+            src={user.avatar}
+            alt='avatar'
+            width={36}
+            height={36}
+            className='w-9 h-9 rounded-full object-cover'
+          />
+        ) : (
+          <div className='w-9 h-9 rounded-full bg-gradient-to-r from-Kzen-primary to-Kzen-secondary flex items-center justify-center text-white font-semibold'>
+            {initial}
+          </div>
+        )}
+        <Icon icon="basil:caret-down-outline" width="24" height="24" className='text-Kzen-dark' />
       </button>
 
       {open && (
@@ -55,7 +74,7 @@ export default function UserDropdown() {
             href='/user/profile'
             className='flex items-center gap-2 px-4 py-2 hover:bg-gray-100 text-gray-700'
           >
-            <Icon icon="gravity-ui:person" width="16" height="16"/>
+            <Icon icon="gravity-ui:person" width="16" height="16" />
             <span>Profil</span>
           </a>
           <button
@@ -63,7 +82,7 @@ export default function UserDropdown() {
             disabled={isLoading}
             className='flex items-center gap-2 px-4 py-2 w-full hover:bg-gray-100 text-gray-700 disabled:opacity-50'
           >
-            <Icon icon="ic:baseline-logout" width="16" height="16"/>
+            <Icon icon="ic:baseline-logout" width="16" height="16" />
             <span>{isLoading ? 'Logging out...' : 'Log out'}</span>
           </button>
         </div>

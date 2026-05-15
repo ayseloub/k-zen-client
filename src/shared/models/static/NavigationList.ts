@@ -16,7 +16,7 @@ interface INavItem {
 export const NavigationList: INavItem[] = [
   {
     title: "Dashboard",
-    href: "/dashboard",
+    href: "/user/dashboard",
   },
   {
     title: "Tentang Kami",

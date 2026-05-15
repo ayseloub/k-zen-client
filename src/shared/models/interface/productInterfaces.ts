@@ -28,3 +28,21 @@ export interface IProductMeta {
   total: number;
   last_page: number;
 }
+
+
+export interface IUserEnrollment {
+  id: string;
+  name: string;
+  category: string;
+  region: string;
+  program: string;
+  position: string;
+  expiry_date: string | null;
+  expiry_status: string | null;
+  registration_step: string;
+}
+
+export interface ITotalEnrollment {
+  type_name: string;
+  total_enrollments: number;
+}
