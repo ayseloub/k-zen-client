@@ -60,8 +60,7 @@ export async function login(request: ILoginPayloadRoot): Promise<ILoginResult> {
 
     const cookieStore = await cookies();
     cookieStore.set('token', data.data.token, {
-      httpOnly: false,
-      secure: process.env.NODE_ENV === 'production',
+      httpOnly: true,
       sameSite: 'lax',
       path: '/',
     });
@@ -308,6 +307,12 @@ export async function getToken(): Promise<string | null> {
   const cookieStore = await cookies();
   const token = cookieStore.get('token');
   return token?.value ?? null;
+}
+
+export async function getAuthStatus(): Promise<boolean> {
+  const cookieStore = await cookies();
+  const token = cookieStore.get('token');
+  return !!token?.value;
 }
 
 export async function getUserProfile(): Promise<IUserProfile | null> {

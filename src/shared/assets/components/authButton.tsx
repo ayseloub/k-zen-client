@@ -2,32 +2,31 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { logout } from '@/shared/actions/authService';
+import { useRouter, usePathname } from 'next/navigation';
+import { logout, getAuthStatus } from '@/shared/actions/authService';
 import UserDropdown from './UserDropdown';
 
 export default function AuthButton() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isChecking, setIsChecking] = useState(true);
   const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
-    const token = document.cookie
-      .split('; ')
-      .find((row) => row.startsWith('token='));
-    setIsLoggedIn(!!token);
-  }, []);
+    setIsChecking(true);
+    getAuthStatus()
+      .then(setIsLoggedIn)
+      .finally(() => setIsChecking(false));
+  }, [pathname]);
 
   useEffect(() => {
     if (!isLoggedIn) return;
 
-    const checkToken = () => {
-      const token = document.cookie
-        .split('; ')
-        .find((row) => row.startsWith('token='));
-
-      if (!token) {
+    const checkToken = async () => {
+      const stillLoggedIn = await getAuthStatus();
+      if (!stillLoggedIn) {
         setIsLoggedIn(false);
-        logout();
+        await logout();
         router.replace('/auth/login');
       }
     };
@@ -35,6 +34,8 @@ export default function AuthButton() {
     const interval = setInterval(checkToken, 30000);
     return () => clearInterval(interval);
   }, [isLoggedIn, router]);
+
+  if (isChecking) return null;
 
   if (isLoggedIn) {
     return <UserDropdown />;
